@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent (typeof (Animator))]
+[RequireComponent (typeof (SpriteDepth))]
 public class AnimatorSprite : MonoBehaviour {
 	Animator m_anim;
 	List<string> m_states;
