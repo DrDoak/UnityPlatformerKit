@@ -1,0 +1,14 @@
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\BasicMovement.cs">
+    <Files>
+      <File FileName="Assets\Scripts\PhysicsTD.cs" Line="180" Column="5" />
+      <File FileName="Assets\Scripts\Attackable.cs" Line="8" Column="35" />
+      <File FileName="Assets\Scripts\BasicMovement.cs" Line="109" Column="29" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
