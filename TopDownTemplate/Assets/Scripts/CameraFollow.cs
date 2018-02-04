@@ -73,13 +73,11 @@ public class CameraFollow : MonoBehaviour {
 		public Vector2 velocity;
 		float left,right;
 		float top,bottom;
-		Vector2 focusSize;
 
 		Vector2 camSize;
 
 
 		public FocusArea(Bounds targetBounds, Vector2 size,Vector2 largeCam,Vector2 minVertex, Vector2 maxVertex) {
-			focusSize = size;
 			Vector2 realCenter = new Vector2(targetBounds.center.x,targetBounds.center.y);
 			//Debug.Log("Min: " + (realCenter.y - largeCam.y/2f) + " Max vertex: " + minVertex.y);
 			if (realCenter.x - largeCam.x/2 < minVertex.x + size.x/2f) {

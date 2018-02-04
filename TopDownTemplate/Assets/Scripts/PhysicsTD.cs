@@ -23,6 +23,7 @@ public class PhysicsTD : MonoBehaviour {
 	public bool canMove = true;
 	public bool AttemptingMovement = false;
 	public float DecelerationRatio = 1.0f;
+	public float Y_SpeedRatio = 0.5f;
 
 	float horizontalRaySpacing;
 	float verticalRaySpacing;
@@ -37,7 +38,6 @@ public class PhysicsTD : MonoBehaviour {
 	Vector2 playerForce = new Vector2(); 
 	Vector2 spawnPos;
 	bool resetPos = false;
-	AnimatorSprite m_anim;
 
 	float m_initialOffsetX;
 
@@ -51,7 +51,6 @@ public class PhysicsTD : MonoBehaviour {
 		canMove = true;
 		setDirection (Dir);
 		onSpawn ();
-		m_anim = GetComponent<AnimatorSprite> ();
 	}
 	void onSpawn() {
 		if (resetPos) {
@@ -111,6 +110,7 @@ public class PhysicsTD : MonoBehaviour {
 		if (velocity.y != 0) {
 			VerticalCollisions (ref velocity);
 		}
+		velocity.y *= Y_SpeedRatio;
 		transform.Translate (velocity);
 	}
 	//Apply a quick "burst" of velocity to the player in a certain direction that 

@@ -21,9 +21,19 @@ public class AnimatorSprite : MonoBehaviour {
 		}
 	}
 
-	public bool Play(string stateName) {
+	public bool Play(string stateName, bool autoAlign = false) {
 		if (m_currentAnim == stateName || m_currentAnim == "none") {
 			return true;
+		}
+		if (autoAlign) {
+			Direction d = GetComponent<PhysicsTD> ().Dir;
+			if (d == Direction.DOWN) {
+				stateName += "_down";
+			} else if (d == Direction.UP) {
+				stateName += "_up";
+			} else {
+				stateName += "_side";
+			}
 		}
 		if (m_states.Contains(stateName)) {
 			m_anim.Play (stateName);

@@ -60,8 +60,16 @@ public class BasicMovement : MonoBehaviour {
 		Vector2 input = new Vector2 (inputX, inputY);
 		m_physics.Move (Velocity, input);
 		m_physics.AttemptingMovement = (inputX != 0.0f || inputY != 0.0f);
+		playAnimations ();
 	}
 
+	internal void playAnimations() {
+		if (m_physics.AttemptingMovement) {
+			m_anim.Play ("walk", true);
+		} else {
+			m_anim.Play ("idle", true);
+		}
+	}
 	internal void playerMovement() {
 		inputX = 0.0f;
 		inputY = 0.0f;
@@ -77,6 +85,16 @@ public class BasicMovement : MonoBehaviour {
 		}else if (m_physics.canMove && autonomy) {
 			inputY = Input.GetAxis ("Vertical");
 			inputX = Input.GetAxis("Horizontal");
+			if (inputX > 0.1f) {
+				m_physics.setDirection (Direction.RIGHT);
+			} else if (inputX < -0.1f) {
+				m_physics.setDirection (Direction.LEFT);
+			}
+			if (inputY  > 0.1f) {
+				m_physics.setDirection (Direction.UP);
+			} else if (inputY < -0.1f) {
+				m_physics.setDirection (Direction.DOWN);
+			}
 		}
 	}
 

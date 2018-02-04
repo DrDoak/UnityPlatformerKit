@@ -18,7 +18,6 @@ public class Attackable : MonoBehaviour {
 	public float deathTime = 0.0f;
 	public Color deathColor = new Color(0.0f,0.0f,0.0f);
 	float currDeathTime;
-	SpriteRenderer SR;
 
 	public AudioClip Hit;
 
@@ -31,7 +30,6 @@ public class Attackable : MonoBehaviour {
 		movementController = gameObject.GetComponent<PhysicsTD> ();
 		health = Mathf.Min (health, max_health);
 		currDeathTime = deathTime;
-		SR = GetComponent<SpriteRenderer> ();
 	}
 	
 	// Update is called once per frame
