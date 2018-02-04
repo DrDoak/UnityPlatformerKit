@@ -60,16 +60,9 @@ public class BasicMovement : MonoBehaviour {
 		Vector2 input = new Vector2 (inputX, inputY);
 		m_physics.Move (Velocity, input);
 		m_physics.AttemptingMovement = (inputX != 0.0f || inputY != 0.0f);
-		playAnimations ();
 	}
 
-	internal void playAnimations() {
-		if (m_physics.AttemptingMovement) {
-			m_anim.Play ("walk", true);
-		} else {
-			m_anim.Play ("idle", true);
-		}
-	}
+
 	internal void playerMovement() {
 		inputX = 0.0f;
 		inputY = 0.0f;
@@ -94,6 +87,9 @@ public class BasicMovement : MonoBehaviour {
 				m_physics.setDirection (Direction.UP);
 			} else if (inputY < -0.1f) {
 				m_physics.setDirection (Direction.DOWN);
+			}
+			if (Input.GetButton ("Fire1")) {
+				GetComponent<Fighter> ().tryAttack ("default");
 			}
 		}
 	}

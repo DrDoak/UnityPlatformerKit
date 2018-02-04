@@ -28,6 +28,9 @@ GameObject:
   - component: {fileID: 114077600041320840}
   - component: {fileID: 95193433810545062}
   - component: {fileID: 114428443045439152}
+  - component: {fileID: 114088344292214322}
+  - component: {fileID: 114283585766680980}
+  - component: {fileID: 114246251947509476}
   m_Layer: 0
   m_Name: player
   m_TagString: Untagged
@@ -122,6 +125,76 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Y_SortOffset: 0
+--- !u!114 &114088344292214322
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1797241461104264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1994e71cbe2edd849aab659e7d7bd75e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HurtAnimation: hit
+  CurrentAttackName: 
+  recoveryTime: 0
+  startUpTime: 0
+  stunTime: 0
+  AttackSound: {fileID: 0}
+  hitCombo: 0
+--- !u!114 &114246251947509476
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1797241461104264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abb3562db1f413448958ab2ab02ef953, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackName: default
+  CreateHitbox: 1
+  HitboxScale: {x: 1, y: 1}
+  HitboxOffset: {x: 0.5, y: 0}
+  UniqueAIPrediction: 0
+  AIPredictionHitbox: {x: 0, y: 0}
+  AIPredictionOffset: {x: 0, y: 0}
+  damage: 10
+  stun: 0.3
+  hitboxDuration: 0.5
+  knockback: {x: 10, y: 0}
+  startUpTime: 0.5
+  recoveryTime: 1
+  StartUpAnimation: attack_s
+  RecoveryAnimation: attack_r
+  animSpeed: 1
+  hitType: melee
+  timeSinceStart: 0
+  attackFX: {fileID: 0}
+  startupSoundFX: {fileID: 0}
+  attackSoundFX: {fileID: 0}
+  startUpDash: {x: 0, y: 0}
+  startUpDuration: 1
+  attackDash: {x: 10, y: 0}
+  attackDashDuration: 0
+  conclusionDash: {x: 0, y: 0}
+  conclusionDuration: 0
+--- !u!114 &114283585766680980
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1797241461104264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2f176fa900675a449256a92aa0193c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitboxClass: {fileID: 1054257272271882, guid: baee112565b3218489a7c270ce46804e,
+    type: 2}
+  mAttrs: []
 --- !u!114 &114428443045439152
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -170,6 +243,7 @@ MonoBehaviour:
   canMove: 1
   AttemptingMovement: 0
   DecelerationRatio: 1
+  Y_SpeedRatio: 0.5
   velocity: {x: 0, y: 0}
 --- !u!114 &114675442324502636
 MonoBehaviour:

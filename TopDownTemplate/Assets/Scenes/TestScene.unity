@@ -320,6 +320,41 @@ Prefab:
       propertyPath: m_Name
       value: player (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 114675442324502636, guid: b15804536ba015e47a5885912f930b08,
+        type: 2}
+      propertyPath: faction
+      value: player
+      objectReference: {fileID: 0}
+    - target: {fileID: 114246251947509476, guid: b15804536ba015e47a5885912f930b08,
+        type: 2}
+      propertyPath: startUpDuration
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114246251947509476, guid: b15804536ba015e47a5885912f930b08,
+        type: 2}
+      propertyPath: attackDashDuration
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114246251947509476, guid: b15804536ba015e47a5885912f930b08,
+        type: 2}
+      propertyPath: stun
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114246251947509476, guid: b15804536ba015e47a5885912f930b08,
+        type: 2}
+      propertyPath: HitboxScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114246251947509476, guid: b15804536ba015e47a5885912f930b08,
+        type: 2}
+      propertyPath: HitboxScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114246251947509476, guid: b15804536ba015e47a5885912f930b08,
+        type: 2}
+      propertyPath: HitboxOffset.y
+      value: -0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b15804536ba015e47a5885912f930b08, type: 2}
   m_IsPrefabParent: 0
@@ -391,6 +426,11 @@ Prefab:
       propertyPath: m_Color.b
       value: 0.13103461
       objectReference: {fileID: 0}
+    - target: {fileID: 114675442324502636, guid: b15804536ba015e47a5885912f930b08,
+        type: 2}
+      propertyPath: faction
+      value: enemy
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b15804536ba015e47a5885912f930b08, type: 2}
   m_IsPrefabParent: 0
@@ -437,7 +477,7 @@ Prefab:
         type: 2}
       propertyPath: target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1311708938}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 86856ebb1cc73c04a86115975021a18e, type: 2}
   m_IsPrefabParent: 0

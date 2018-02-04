@@ -58,13 +58,13 @@ public class Attackable : MonoBehaviour {
 	}
 
 	public string takeHit(Hitbox hb) {
-		
+		Debug.Log (gameObject + "is Taking hit");
 		if (hb.mAttr != null) {
 			foreach (string k in resistences.Keys) {
 				if (hb.mAttr.Contains(k)) {
-					/*if (GetComponent<Fighter> ()) {
+					if (GetComponent<Fighter> ()) {
 						GetComponent<Fighter> ().registerStun( hb.stun,false,hb);
-					}*/
+					}
 					return "block";
 				}
 			}
@@ -87,9 +87,9 @@ public class Attackable : MonoBehaviour {
 				addToVelocity (force);
 			}
 		}
-		/*if (hb.stun > 0 && GetComponent<Fighter> ()) {
+		if (hb.stun > 0 && GetComponent<Fighter> ()) {
 			GetComponent<Fighter> ().registerStun( hb.stun,true,hb);
-		}*/
+		}
 		return "hit";
 	}
 

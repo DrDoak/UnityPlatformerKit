@@ -1,10 +1,13 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\BasicMovement.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\HitboxMaker.cs">
     <Files>
-      <File FileName="Assets\Scripts\PhysicsTD.cs" Line="180" Column="5" />
-      <File FileName="Assets\Scripts\Attackable.cs" Line="8" Column="35" />
-      <File FileName="Assets\Scripts\BasicMovement.cs" Line="109" Column="29" />
+      <File FileName="Assets\Scripts\Fighter.cs" Line="89" Column="41" />
+      <File FileName="Assets\Scripts\HitboxMaker.cs" Line="21" Column="29" />
+      <File FileName="Assets\Scripts\AttackInfo.cs" Line="28" Column="29" />
+      <File FileName="Assets\Scripts\Hitbox.cs" Line="118" Column="36" />
+      <File FileName="Assets\Scripts\Attackable.cs" Line="99" Column="3" />
+      <File FileName="Assets\Scripts\PhysicsTD.cs" Line="231" Column="27" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

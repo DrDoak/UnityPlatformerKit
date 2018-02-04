@@ -226,4 +226,34 @@ public class PhysicsTD : MonoBehaviour {
 		}
 	}
 	public void TurnToTransform(Transform t) {}
+
+	public Vector2 OrientVectorToDirection(Vector2 v) {
+		Vector2 newV = new Vector2 ();
+		if (Dir == Direction.RIGHT) {
+			newV.x = v.x;
+			newV.y = v.y;
+		} else if (Dir == Direction.LEFT) {
+			newV.x = -v.x;
+			newV.y = v.y;
+		} else if (Dir == Direction.UP) {
+			newV.x = v.y;
+			newV.y = v.x;
+		} else if (Dir == Direction.DOWN) {
+			newV.x = v.y;
+			newV.y = -v.x;
+		}
+		return newV;
+	}
+
+	public Vector2 OrientScaleToDirection(Vector2 s) {
+		Vector2 newV = new Vector2 ();
+		if (Dir == Direction.RIGHT || Dir == Direction.LEFT) {
+			newV.x = s.x;
+			newV.y = s.y;
+		} else if (Dir == Direction.UP || Dir == Direction.DOWN) {
+			newV.x = s.y;
+			newV.y = s.x;
+		}
+		return newV;
+	}
 }
